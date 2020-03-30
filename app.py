@@ -31,10 +31,10 @@ app.layout = html.Div(
                         html.Img(
                             className="logo", src=app.get_asset_url("UW-logo.png")
                         ),
-                        html.H2("SEAN'S HOKEY NY TIMES CORONAVIRUS APP"),
+                        html.H2("NY TIMES CORONAVIRUS DATA VISUALIZATION"),
                         html.P(
-                            """Select different states using the state picker or select counties/regions
-                            using the county picker."""
+                            """Select different states or counties/regions
+                            using the dropdowns. USA total can be selected from the state dropdown."""
                         ),
                         # Change to side-by-side for mobile layout
                         html.Div(
@@ -76,6 +76,14 @@ app.layout = html.Div(
                         # html.P(id="total-state-selection"),
                         # html.P(id="total-county-selection"),
                         # html.P(id="date-value"),
+                        dcc.Markdown(
+                            children=[
+                                "Source: [NY Times](https://github.com/nytimes/covid-19-data)\n",
+                                "To be used for personal use only \n"
+                                "Created using [dash](https://dash.plotly.com/)\n"
+                                "Source "
+                            ],
+                        ),
                     ],
                 ),
                 # Column for app graphs and plots
