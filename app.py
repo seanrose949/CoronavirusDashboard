@@ -79,9 +79,9 @@ app.layout = html.Div(
                         dcc.Markdown(
                             children=[
                                 "Source: [NY Times](https://github.com/nytimes/covid-19-data)\n",
-                                "To be used for personal use only \n"
-                                "Created using [dash](https://dash.plotly.com/)\n"
-                                "Source "
+                                "To be used for personal use only\n",
+                                "Created using [dash](https://dash.plotly.com/)\n",
+                                "[Source code available here](https://github.com/seanrose949/CoronavirusDashboard)"
                             ],
                         ),
                     ],
