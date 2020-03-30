@@ -72,10 +72,10 @@ app.layout = html.Div(
                                 ),
                             ],
                         ),
-                        #html.P(id="total-us-cases"),
-                        #html.P(id="total-state-selection"),
-                        #html.P(id="total-county-selection"),
-                        #html.P(id="date-value"),
+                        # html.P(id="total-us-cases"),
+                        # html.P(id="total-state-selection"),
+                        # html.P(id="total-county-selection"),
+                        # html.P(id="date-value"),
                     ],
                 ),
                 # Column for app graphs and plots
@@ -89,7 +89,7 @@ app.layout = html.Div(
                         #         "Select state curve to see histogram by county."
                         #     ],
                         # ),
-                        #dcc.Graph(id="histogram"),
+                        # dcc.Graph(id="histogram"),
                     ],
                 ),
             ],
@@ -119,7 +119,6 @@ def get_time_series(selected_data, df, default):
     ],
 )
 def update_graph(selected_states, selected_counties):
-
     # Get data for selected states and counties
     selected_state_df = get_time_series(selected_states, state_df, None)
     selected_county_df = get_time_series(selected_counties, county_df, None)
@@ -173,11 +172,11 @@ def update_graph(selected_states, selected_counties):
         showlegend=True,
         yaxis=dict(type='log'),
         paper_bgcolor='#dbdbdb',
-        plot_bgcolor = '#dbdbdb'
+        plot_bgcolor='#dbdbdb'
     )
 
     return fig
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run_server(host='0.0.0.0', port=8050, debug=False)
